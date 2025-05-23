@@ -55,3 +55,6 @@ ltmain.sh
 
 # User-specific files
 *.launch
+
+#CLion
+.idea

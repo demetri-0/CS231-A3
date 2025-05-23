@@ -1,0 +1,5 @@
+John Smith,Masters,$60000 
+Jackie Collins,Doctorate,$80000
+Gary Freeman,Bachelors,$50000 
+Will Smith,Masters,$100000
+Bob Schults,High_School,$20000 
