@@ -9,6 +9,7 @@
 using namespace std;
 
 void parseLine(string line, vector<Employee>& employees);
+void sortByEducation(vector<Employee>& employees);
 void giveRaise(vector<Employee>& employees);
 void printEducationCount(vector<Employee>& employees);
 void printEmployees(vector<Employee>& employees);
@@ -31,6 +32,8 @@ int main() {
 		while (getline(inputFile, line)) {
 			parseLine(line, employees);
 		}
+
+		sortByEducation(employees);
 
 		giveRaise(employees);
 		printEducationCount(employees);
@@ -79,6 +82,7 @@ void parseLine(string line, vector<Employee>& employees) {
 void giveRaise(vector<Employee>& employees) {
 
 	for_each(employees.begin(), employees.end(), [](Employee& employee) {
+
 		if (employee.education == DOCTORATE) {
 			employee.salary *= 1.3;
 		}
@@ -92,7 +96,15 @@ void giveRaise(vector<Employee>& employees) {
 }
 
 void sortByEducation(vector<Employee>& employees) {
-	return;
+
+	sort(employees.begin(), employees.end(), [](Employee& employee1, Employee& employee2) {
+
+		if (employee1.education == employee2.education) {
+			return employee1.salary > employee2.salary;
+		}
+
+		return employee1.education > employee2.education;
+	});
 }
 
 void printEducationCount(vector<Employee>& employees) {
