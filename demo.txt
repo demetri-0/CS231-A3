@@ -1,0 +1,26 @@
+Input File Contents:
+
+John Smith,Masters,$60000 
+Jackie Collins,Doctorate,$80000
+Gary Freeman,Bachelors,$50000 
+Will Smith,Masters,$100000
+Bob Schults,High_School,$20000 
+
+********************************************************************************
+Output:
+
+Welcome to the Employee Records Manager!
+Please enter the name of the input file: employees.txt
+
+== HIGHEST EDUCATION OF EMPLOYEES ==
+Doctorate: 1
+Masters: 2
+Bachelors: 1
+High School: 1
+
+== EMPLOYEES ==
+Name: Bob Schults // Education: High School // Salary: $22000
+Name: Gary Freeman // Education: Bachelors // Salary: $60000
+Name: John Smith // Education: Masters // Salary: $72000
+Name: Will Smith // Education: Masters // Salary: $120000
+Name: Jackie Collins // Education: Doctorate // Salary: $104000
